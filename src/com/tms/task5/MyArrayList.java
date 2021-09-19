@@ -18,6 +18,26 @@ public class MyArrayList<T>{
         return t[i];
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof MyArrayList)) return false;
+        MyArrayList<?> that = (MyArrayList<?>) o;
+        return Arrays.equals(t, that.t);
+    }
+
+    @Override
+    public int hashCode() {
+        return Arrays.hashCode(t);
+    }
+
+    @Override
+    public String toString() {
+        return "MyArrayList{" +
+                "t=" + Arrays.toString(t) +
+                '}';
+    }
+
     public T[] addNew(T newElemnt){
         Arrays.fill(t,newElemnt);
         return t;
