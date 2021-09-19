@@ -1,0 +1,4 @@
+docnum12345678& invalid номер содержит спецсимволы
+docnum1234FD789 valid
+docnum1234567891 invalid длина номера больше 15 символов
+docnum123456789 valid
